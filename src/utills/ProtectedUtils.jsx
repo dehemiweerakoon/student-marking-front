@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
 
 const ProtectedUtils = () => {
     const token = sessionStorage.getItem('token');
@@ -10,6 +11,7 @@ const ProtectedUtils = () => {
   return (
     <>
     <Outlet/>
+    <Footer/>
     </>
   )
 }

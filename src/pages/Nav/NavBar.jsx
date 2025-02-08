@@ -6,12 +6,24 @@ import home from '../../assets/home (1).png'
 import dashboard from '../../assets/dashboard.png'
 import logout from '../../assets/export.png'
 import { useState } from "react"
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const NavBar = ({expand}) => {
         const [expanded, setExpanded] = useState(false);
         const [show, setShow] = useState(false);
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+        const navigate = useNavigate();
+
+  const LogOut =()=>{
+    sessionStorage.setItem('token',"");
+    sessionStorage.setItem('username',"");
+    sessionStorage.setItem('user_id',"");
+    axios.defaults.headers.common['Authorization'] ="";
+    navigate("/login")
+    console.clear();
+  }
   return (
   <>
  
@@ -25,7 +37,7 @@ const NavBar = ({expand}) => {
                                 onHide={handleClose}>
                 <Offcanvas.Header closeButton className="btn-close-white" style={{color: "white"}}></Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className="d-flex flex-column text-white " style={{height: "93vh"}}>
+                  <Nav className="d-flex flex-column text-white " style={{height: "100vh"}}>
                     <Nav.Item className="p-2">
                       <Nav.Link><Image src={degree} /></Nav.Link>
                     </Nav.Item>
@@ -38,8 +50,8 @@ const NavBar = ({expand}) => {
                       <Nav.Link href="/user/dashboard" style={{color: "white"}}>Dashboard</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="mt-5">
-                      <Nav.Link><Image src={logout} className="" /></Nav.Link>
-                      <Nav.Link style={{color: "white"}}>LogOut</Nav.Link>
+                      <Nav.Link><Image src={logout} className="" onClick={LogOut}/></Nav.Link>
+                      <Nav.Link style={{color: "white"}} onClick={LogOut}>LogOut</Nav.Link>
                     </Nav.Item>
                   </Nav>
                 </Offcanvas.Body>

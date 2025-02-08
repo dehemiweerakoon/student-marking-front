@@ -5,6 +5,7 @@ import LogIn from './pages/LogIn'
 import ProtectedUtils from './utills/ProtectedUtils'
 import Home from './pages/Home/Home'
 import DashBoard from './pages/DashBoard/DashBoard'
+import Admin from './pages/admin/Admin'
 function App() {
   
 
@@ -16,6 +17,7 @@ function App() {
     <Route element={<ProtectedUtils/>}>
      <Route path='/user/home' element={<Home/>}/>
      <Route path='/user/dashboard' element={<DashBoard/>}/>
+     <Route path='/admin/home' element={<Admin/>}/>
     </Route>
 
       <Route path='/login' element={<LogIn/>}/>

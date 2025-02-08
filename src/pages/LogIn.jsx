@@ -31,7 +31,7 @@ const LogIn = () => {
     sessionStorage.setItem('user_id',response.data.id);
     axios.defaults.headers.common['Authorization'] =`Bearer ${response.data.token}`;
     if(response.data.role ==="ROLE_ADMIN"){
-      console.log("");
+      navigate("/admin/home");
     }else if(response.data.role ==="ROLE_USER"){
        navigate("/user/home")
     } 

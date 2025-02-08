@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import { Col, Container, Row, Table } from "react-bootstrap"
 import NavBar from "../Nav/NavBar"
@@ -9,12 +10,13 @@ const DashBoard = () => {
   const [marks,setMarks] = useState([]);
 
     const getAllMarks =async()=>{
-       const id = sessionStorage.getItem('user_id')
-       console.log(id);
+       const id = sessionStorage.getItem('user_id') || 0;
+        console.log(id);
        const response = await getRequest(`/user/marks/${id}`);
        setMarks(response.data)
-       console.log(response.data);
-    }
+       console.log(response.data[0])
+        console.log(response.data);
+     }
 
     useEffect(()=>{
         getAllMarks()
@@ -25,7 +27,7 @@ const DashBoard = () => {
     {
       ['lg'].map((expand) => (
         <>
-        <Container fluid className="m-0 p-0">
+        <Container className="m-0 p-0">
              <Row>
             {/* Sidebar */}
             <Col md={1} className="p-0">
@@ -33,8 +35,8 @@ const DashBoard = () => {
             </Col>
     
             {/* Content */}
-            <Col md={10} className="p-4">
-            <Table striped bordered hover className="m-5">
+            <Col md={10} className="mt-5 p-4">
+            <Table striped bordered hover responsive className="table-info">
                     <thead>
                       <tr>
                         <th>Index</th>
@@ -45,20 +47,22 @@ const DashBoard = () => {
                     </thead>
                     <tbody>
                   
-                      {
-              marks && marks.map((mark,index)=>{
-                return(
-                  <>
-                    <tr>
-                        <td>{index}</td>
-                        <td>{mark.course.id}</td>
-                        <td>{mark.course.courseName}</td>
-                        <td>{mark.marking}</td>
-                      </tr>
-                  </>
-                )
-              })
-            }
+                    {marks.length > 0 ? (
+                  marks.map((mark, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>{mark?.course?.id || "N/A"}</td>
+                      <td>{mark?.course?.courseName || "N/A"}</td>
+                      <td>{mark?.marking || "N/A"}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4" className="text-center">
+                      No data available
+                    </td>
+                  </tr>
+                )}
                     </tbody>
                   </Table>
             </Col>
