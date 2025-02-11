@@ -1,22 +1,32 @@
 🎓 Student Marking System - Frontend
+
 This repository contains the frontend of the Student Marking System, built with Vite and React. The system allows users to manage student records, enter marks, calculate grades, and generate reports.
 
 🚀 Features
+
 📌 User Authentication (Login & Logout)
+
 📌 Student Management (Add, Edit, Delete students)
+
 📌 Mark Entry System
+
 📌 Grade Calculation & Reports
+
 📌 Responsive UI with Tailwind CSS
 
 
 🛠️ Tech Stack
 
 1.Frontend: Vite, React, React Router
+
 2.Styling: Tailwind CSS / SCSS
+
 3.API Communication: Axios
+
 4.Authentication: JWT (if applicable)
 
 📦 Installation
+
 1️⃣ Clone the repository:
 
 2️⃣ Install dependencies:
@@ -30,11 +40,16 @@ npm install
 npm run dev
 ```
 
-📜 Scripts
-Command	Description
+## 📜Scripts
+
+# Command	Description
+
 npm run dev	- Starts the development server
+
 npm run build	- Builds the project for production
+
 npm run preview -	Serves the built project locally
+
 npm run lint -	Lints the code using ESLint
 
 📂 Project Structure
