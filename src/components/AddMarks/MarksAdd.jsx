@@ -157,7 +157,7 @@ const MarksAdd = () => {
                                 </Form.Group>
                         <Col md={9}>
                         <div className="d-flex justify-content-end mt-4 ">
-                                <Button type="submit" className="bg-primary-subtle text-primary-emphasis">Add Student</Button>
+                                <Button type="submit" className="bg-primary-subtle text-primary-emphasis">Add Marks</Button>
                                 </div>
                         
                         </Col>

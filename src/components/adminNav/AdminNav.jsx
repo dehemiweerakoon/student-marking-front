@@ -38,7 +38,7 @@ const AdminNav = ({expand}) => {
                                 onHide={handleClose}>
                 <Offcanvas.Header closeButton className="btn-close-white" style={{color: "white"}}></Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className="d-flex flex-column text-white " style={{height: "90vh"}}>
+                  <Nav className="d-flex flex-column text-white " style={{height: "87vh"}}>
                     <Nav.Item className="p-2">
                       <Nav.Link><Image src={degree} /></Nav.Link>
                     </Nav.Item>
@@ -55,7 +55,7 @@ const AdminNav = ({expand}) => {
                       <Nav.Link href="/admin/addMarks" style={{color:"white"}}>Add Marks</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="mt-3">
-                      <Nav.Link href="/admin/course"><Image src={addMarks}/></Nav.Link>
+                      <Nav.Link href="/admin/course"><Image src={addCourse}/></Nav.Link>
                       <Nav.Link href="/admin/course" style={{color:"white"}}>Courses</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="mt-5">

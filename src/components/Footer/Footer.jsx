@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 function Footer() {
   return (
     <>
+ <footer className="mt-1">
  <Container fluid className="p-3 " style={{backgroundColor:"#e1eaf9"}}>
  <Row>
 <Col md={12} className="text-align-center d-flex justify-content-center">
@@ -10,6 +11,7 @@ function Footer() {
 </Col>
  </Row>
 </Container>
+ </footer>
     </>
   )
 }
