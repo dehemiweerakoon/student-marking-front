@@ -9,6 +9,8 @@ import Admin from './pages/admin/Admin'
 import AddStudent from './pages/AddStudent/AddStudent'
 import MarksAdd from './components/AddMarks/MarksAdd'
 import Course from './components/Course/Course'
+import RegisterAdmin from './pages/RegisterAdmin/RegisterAdmin'
+import RegisterUser from './pages/RegisterUser/RegisterUser'
 function App() {
   
 
@@ -27,6 +29,8 @@ function App() {
     </Route>
 
       <Route path='/login' element={<LogIn/>}/>
+      <Route path='/register/admin' element={<RegisterAdmin/>}/>
+      <Route path='/register/user' element={<RegisterUser/>}/>
      </Routes>
      </BrowserRouter>
     </>

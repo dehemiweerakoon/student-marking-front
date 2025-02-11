@@ -3,7 +3,7 @@ import {Button, Col, Container, FloatingLabel, Form, Image, Row} from 'react-boo
 import login from '../assets/Login.png'
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const LogIn = () => {
 
@@ -80,6 +80,7 @@ const LogIn = () => {
         </div>
 
         <p style={{color:"#820025"}} className='mt-2'>{error}</p>
+         <h6><Link to={"/register/user"} style={{color:"black",textDecoration:"none"}}> Not a Student </Link> <Link to={"/register/admin"} style={{color:"purple",textDecoration:"none"}}>/  Teacher </Link></h6>
         </Col>
       <Col md={6}>
       <Image src={login} alt="login pic" thumbnail className='rounded-5 p-2'/>
