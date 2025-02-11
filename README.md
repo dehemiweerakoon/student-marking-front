@@ -29,7 +29,7 @@ npm run preview -	Serves the built project locally
 npm run lint -	Lints the code using ESLint
 
 📂 Project Structure
-
+```
 📂 student-marking-system-frontend
 │── 📁 src
 │   ├── 📁 components    # Reusable UI components
@@ -43,6 +43,8 @@ npm run lint -	Lints the code using ESLint
 │── 📄 vite.config.js   # Vite configuration
 │── 📄 package.json     # Dependencies & scripts
 │── 📄 README.md        # Documentation
+```
+
 📖 Future Enhancements
 📊 Dashboard with Charts
 🔔 Notifications for Low Grades
