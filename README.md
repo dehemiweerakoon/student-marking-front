@@ -7,19 +7,28 @@ This repository contains the frontend of the Student Marking System, built with 
 📌 Mark Entry System
 📌 Grade Calculation & Reports
 📌 Responsive UI with Tailwind CSS
+
+
 🛠️ Tech Stack
+
 Frontend: Vite, React, React Router
 Styling: Tailwind CSS / SCSS
 API Communication: Axios
 Authentication: JWT (if applicable)
+
 📦 Installation
 1️⃣ Clone the repository:
 
 2️⃣ Install dependencies:
+
+```
 npm install
+```
 
 3️⃣ Start the development server:
+```
 npm run dev
+```
 
 📜 Scripts
 Command	Description
