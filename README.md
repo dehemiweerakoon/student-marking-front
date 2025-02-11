@@ -11,10 +11,10 @@ This repository contains the frontend of the Student Marking System, built with 
 
 🛠️ Tech Stack
 
-Frontend: Vite, React, React Router
-Styling: Tailwind CSS / SCSS
-API Communication: Axios
-Authentication: JWT (if applicable)
+1.Frontend: Vite, React, React Router
+2.Styling: Tailwind CSS / SCSS
+3.API Communication: Axios
+4.Authentication: JWT (if applicable)
 
 📦 Installation
 1️⃣ Clone the repository:
