@@ -9,6 +9,8 @@ import home from '../../assets/home (1).png'
 import axios from "axios";
 import addStudent from '../../assets/add-user.png'
 import logout from '../../assets/export.png'
+import addMarks from '../../assets/plus-sign.png'
+import addCourse from '../../assets/educational-video.png'
 
 const AdminNav = ({expand}) => {
     const [expanded, setExpanded] = useState(false);
@@ -36,22 +38,31 @@ const AdminNav = ({expand}) => {
                                 onHide={handleClose}>
                 <Offcanvas.Header closeButton className="btn-close-white" style={{color: "white"}}></Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className="d-flex flex-column text-white " style={{height: "100vh"}}>
+                  <Nav className="d-flex flex-column text-white " style={{height: "90vh"}}>
                     <Nav.Item className="p-2">
                       <Nav.Link><Image src={degree} /></Nav.Link>
                     </Nav.Item>
-                    <Nav.Item className="mt-5">
+                    <Nav.Item className="mt-3">
                       <Nav.Link href="/admin/home"><Image src={home} className="" /></Nav.Link>
                       <Nav.Link href="/admin/home" style={{color: "white"}}>Home</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item className="mt-5 mb-5">
+                    <Nav.Item className="mt-3">
                       <Nav.Link href="/admin/addStudent"><Image src={addStudent} className="" /></Nav.Link>
                       <Nav.Link href="/admin/addStudent" style={{color: "white"}}>Add Student</Nav.Link>
+                    </Nav.Item> 
+                    <Nav.Item className="mt-3">
+                      <Nav.Link href="/admin/addMarks"><Image src={addMarks}/></Nav.Link>
+                      <Nav.Link href="/admin/addMarks" style={{color:"white"}}>Add Marks</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item className="mt-3">
+                      <Nav.Link href="/admin/course"><Image src={addMarks}/></Nav.Link>
+                      <Nav.Link href="/admin/course" style={{color:"white"}}>Courses</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="mt-5">
                       <Nav.Link><Image src={logout} className="" onClick={LogOut}/></Nav.Link>
                       <Nav.Link style={{color: "white"}} onClick={LogOut}>LogOut</Nav.Link>
                     </Nav.Item>
+                   
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
